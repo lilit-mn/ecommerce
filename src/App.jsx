@@ -1,4 +1,5 @@
 import AuthProvider from './context/AuthContext';
+import CartProvider from './context/CartContext';
 import {Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Checkout from './pages/Checkout';
@@ -13,15 +14,17 @@ function App() {
 
   return (
   <AuthProvider>
-    <div className='app'>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/auth' element={<Auth />} />
-          <Route path='/checkout' element={<Checkout />} />
-          <Route path='/products/:id' element={<ProductDetails />} />
-        </Routes>
+    <CartProvider>
+      <div className='app'>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/auth' element={<Auth />} />
+            <Route path='/checkout' element={<Checkout />} />
+            <Route path='/products/:id' element={<ProductDetails />} />
+          </Routes>
       </div>
+    </CartProvider>
     </AuthProvider>
   )
 }
