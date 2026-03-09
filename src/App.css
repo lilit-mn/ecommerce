@@ -71,6 +71,29 @@ body {
   gap: 1rem;
 }
 
+#navbar-checkout {
+  position: relative;
+}
+
+.cart-quantity {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: -13px;
+  top:-3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  border-radius: 50%;
+  /* padding: 10px; */
+  color: red;
+}
+
+.cart-quantity span {
+  font-size: 12px;
+}
+
 .navbar-user {
   display: flex;
   align-items: center;
